@@ -1,46 +1,118 @@
-# Pizza_Sales_By_using_SQL
+# 🍕 Pizza Sales Analysis Using SQL
 
-## Pizza Sales Analysis — SQL Project
-Project Overview: This data-driven project explores key sales insights for a fictional pizza company using SQL. The analysis was built from scratch using a relational database with four core tables: Orders, Order Details, Pizzas, and Pizza Types. The main objective was to derive actionable business intelligence from raw sales data.
+An end-to-end SQL project focused on analyzing pizza sales data to uncover business insights related to revenue, customer ordering behavior, product performance, and sales trends.
 
----
-
-## Highlights of Analysis:
-Total Sales & Orders: Identified the total number of orders placed and calculated overall revenue.
+This project demonstrates SQL skills ranging from basic aggregation queries to advanced analytical techniques using joins, window functions, and cumulative calculations.
 
 ---
 
-## Top Performers:
-Most commonly ordered pizza size.
-Highest-priced pizza on the menu.
-Top 5 pizzas by quantity ordered.
-Top 3 revenue-generating pizza types.
+## 📌 Project Overview
+
+The objective of this project is to analyze pizza sales data and answer important business questions such as:
+
+- How much revenue does the business generate?
+- Which pizzas contribute the most to sales?
+- What are customers' ordering patterns?
+- Which pizza categories perform best?
+- How does revenue grow over time?
+
+The project covers **Basic**, **Intermediate**, and **Advanced SQL queries** to simulate real-world business analysis scenarios. :contentReference[oaicite:0]{index=0}
 
 ---
 
-## Category Analysis:
-Category-wise pizza distribution and sales contribution.
-Top pizza types by revenue per category.
-Time-Based Trends:
-Orders distribution by hour of the day.
-Average pizzas sold per day.
-Cumulative revenue trends over time.
+## 🎯 Business Problem
+
+A pizza restaurant wants to better understand its sales performance and customer preferences in order to:
+
+- Increase revenue
+- Improve inventory planning
+- Optimize menu offerings
+- Identify best-selling products
+- Improve operational efficiency
+
+This analysis helps management make data-driven decisions based on historical sales data.
 
 ---
 
-## Revenue Insights:
-Percentage contribution of each pizza type to total revenue.
+## 🛠️ Tools & Technologies Used
+
+| Tool | Purpose |
+|------|---------|
+| SQL | Data Analysis |
+| MySQL | Database Management |
+| Excel/CSV | Data Source |
+| PowerPoint/PDF | Project Presentation |
 
 ---
 
-## Skills Demonstrated:
-Complex SQL Joins and Aggregations
-Grouping and Time-Series Analysis
-Revenue-based Prioritization
+## 📂 Dataset Information
 
- ## queries/
- basic_queries.sql SELECT, WHERE, ORDER BY
- joins.sql INNER, LEFT, RIGHT joins
- aggregate.sql  ROUP BY, HAVING, COUNT, SUM
- subqueries.sql Nested queries
- advanced.sql CTEs, window functions, etc.
+The project uses four relational datasets: :contentReference[oaicite:1]{index=1}
+
+| Table Name | Description |
+|-----------|-------------|
+| `orders` | Customer order information |
+| `order_details` | Quantity of pizzas ordered |
+| `pizzas` | Pizza size and pricing details |
+| `pizza_types` | Pizza category and ingredients |
+
+The database schema follows a relational model connected through primary and foreign keys. :contentReference[oaicite:2]{index=2}
+
+---
+
+## 🗄️ Database Schema
+
+```text
+orders
+│
+├── order_id (PK)
+├── order_date
+└── order_time
+
+order_details
+│
+├── order_details_id (PK)
+├── order_id (FK)
+├── pizza_id (FK)
+└── quantity
+
+pizzas
+│
+├── pizza_id (PK)
+├── pizza_type_id (FK)
+├── size
+└── price
+
+pizza_types
+│
+├── pizza_type_id (PK)
+├── name
+├── category
+└── ingredients
+
+```
+
+## SQL Concepts Covered
+### SQL Fundamentals
+SELECT
+WHERE
+ORDER BY
+GROUP BY
+HAVING
+LIMIT
+
+## Intermediate SQL
+INNER JOIN
+Multiple Table Joins
+Aggregate Functions
+Date Functions
+Subqueries
+
+---
+
+## 💡 Business Insights
+Certain pizza categories generate a significant share of revenue.
+Customer ordering behavior changes throughout the day.
+A small number of pizza types contribute a large portion of total revenue.
+Revenue trends help identify seasonal demand patterns.
+Understanding customer preferences can improve inventory management.
